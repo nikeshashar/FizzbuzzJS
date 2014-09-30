@@ -6,19 +6,19 @@
     function Fizzbuzz() {}
 
     Fizzbuzz.prototype.isDivisibleByThree = function(number) {
-      return number % 3 === 0;
+      return this._isDivisibleBy(3, number);
     };
 
     Fizzbuzz.prototype.isDivisibleByFive = function(number) {
-      return number % 5 === 0;
+      return this._isDivisibleBy(5, number);
     };
 
     Fizzbuzz.prototype.isDivisibleByFifteen = function(number) {
-      return number % 15 === 0;
+      return this._isDivisibleBy(15, number);
     };
 
-    Fizzbuzz.prototype.isDivisibleBy = function(divisor, number) {
-      return divisor % number === 0;
+    Fizzbuzz.prototype._isDivisibleBy = function(divisor, number) {
+      return number % divisor === 0;
     };
 
     return Fizzbuzz;
